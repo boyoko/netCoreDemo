@@ -13,15 +13,16 @@ namespace Angular2.Api
     {
         public static void Main(string[] args)
         {
-            var config = new ConfigurationBuilder()
-                            .SetBasePath(Directory.GetCurrentDirectory())
-                            .AddJsonFile("hosting.json", optional: true)
-                            .Build();
+            //var config = new ConfigurationBuilder()
+            //                .SetBasePath(Directory.GetCurrentDirectory())
+            //                .AddJsonFile("hosting.json", optional: true)
+            //                .Build();
 
 
             var host = new WebHostBuilder()
                 .UseKestrel()
-                .UseConfiguration(config)
+                //.UseUrls("http://192.168.1.113:5000")
+                //.UseConfiguration(config)
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
